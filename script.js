@@ -14,7 +14,7 @@ function getComputerChoice(){
 
 function SingleRound() {
 
-    let playerchoice = 'ROck';
+    let playerchoice = prompt('Rock, Paper or Scissors?');
     let playerSelection = playerchoice.toLowerCase();
     let computerSelection = getComputerChoice();
     
@@ -59,10 +59,12 @@ function SingleRound() {
         return 'You Win! Scissors beats Paper'
        
 
-    } else {
+    } else if(playerSelection === computerSelection) {
         keepScore();
         return 'Its a draw. Try again'
 
+    } else {
+        return 'Something went wrong?'
     }
 }
 
@@ -81,13 +83,25 @@ function game () {
             console.log(SingleRound());;
         }
     } if (computerScore > playerScore) {
-        console.log('Sorry you just lost. Try again you got this!');
+
+        console.log('Sorry you just lost. Try again you got this!')
+
+        console.log(`FINAL SCORE IS: Your Score is ${playerScore} 
+        and the CPU's score is ${computerScore}`);
     } else if (computerScore < playerScore){
-        console.log('Congratulations, I knew you could do it!');
+
+        console.log('Congratulations, I knew you could do it!')
+
+        console.log(`FINAL SCORE IS: Your Score is ${playerScore} 
+        and the CPU's score is ${computerScore}`);
     } else {
+
         console.log('Its a draw')
+
+        console.log(`FINAL SCORE IS: Your Score is ${playerScore} 
+        and the CPU's score is ${computerScore}`)
     }
     
 }
-// game();
+game();
 
