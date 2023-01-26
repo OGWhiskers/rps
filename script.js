@@ -76,10 +76,18 @@ function keepScore () {
 }
 
 function game () {
-    for (let i = 0; i < 5; i++) {
-        console.log(SingleRound());;
+    if (playerScore <= 5 || computerScore <= 5) {
+        for (let i = 0; i < 5; i++) {
+            console.log(SingleRound());;
+        }
+    } if (computerScore > playerScore) {
+        console.log('Sorry you just lost. Try again you got this!');
+    } else if (computerScore < playerScore){
+        console.log('Congratulations, I knew you could do it!');
+    } else {
+        console.log('Its a draw')
     }
+    
 }
-game();
-
+// game();
 
