@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  background-color: #222;
+  color: aliceblue;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+}
+.btnContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 150px;
+
+  flex-wrap: wrap;
+}
+.score-display,
+.display-round {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
